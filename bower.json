@@ -1,0 +1,30 @@
+{
+  "name": "tooltips.less",
+  "version": "0.2.2",
+  "description": "LESS Tooltips",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/iamso/tooltips.less.git"
+  },
+  "authors": [
+    "Steve Ottoz <so@dev.so>"
+  ],
+  "main": "dist/tooltips.min.css",
+  "license": "MIT",
+  "homepage": "https://github.com/iamso/tooltips.less.git",
+  "ignore": [
+    ".bower.json",
+    ".editorconfig",
+    ".git",
+    ".gitattributes",
+    ".gitignore",
+    "demo",
+    "grunt",
+    "Gruntfile.js",
+    "node_modules"
+  ],
+  "keywords": [
+    "tooltips",
+    "less"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "tooltips.less",
+  "repository": "iamso/tooltips.less",
+  "description": "LESS Tooltips",
+  "version": "0.2.2",
+  "keywords": [
+    "tooltips",
+    "less"
+  ],
+  "styles": [
+    "dist/tooltips.css",
+    "dist/tooltips.min.css"
+  ],
+  "license": "MIT"
+}

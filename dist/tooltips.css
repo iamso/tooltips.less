@@ -1,0 +1,274 @@
+/*!
+ * tooltips.less - 0.2.2
+ * LESS Tooltips
+ * Author: Steve Ottoz <so@dev.so>
+ * Build date: 2016-03-29
+ * Copyright (c) 2016 Steve Ottoz
+ * Released under the MIT license
+ */
+.tooltip {
+  position: relative;
+}
+.tooltip:hover:before,
+.tooltip.hover:before,
+.tooltip:hover:after,
+.tooltip.hover:after {
+  opacity: 1;
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+}
+.tooltip:before,
+.tooltip:after {
+  position: absolute;
+  box-sizing: border-box;
+  text-shadow: none;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transition: margin .4s 0s cubic-bezier(.19, 1, .22, 1), opacity .4s 0s cubic-bezier(.19, 1, .22, 1);
+          transition: margin .4s 0s cubic-bezier(.19, 1, .22, 1), opacity .4s 0s cubic-bezier(.19, 1, .22, 1);
+  -webkit-transform: translate(-200vw, -200vh);
+      -ms-transform: translate(-200vw, -200vh);
+          transform: translate(-200vw, -200vh);
+}
+.tooltip:before {
+  z-index: 99999999999;
+  width: auto;
+  padding: .6em 1.4em;
+  font-size: .9em;
+  color: #fff;
+  white-space: nowrap;
+  content: attr(data-title);
+  background: rgba(0, 0, 0, .8);
+  border-radius: 0;
+  box-shadow: none;
+}
+.tooltip:after {
+  z-index: 99999999999;
+  width: 0;
+  height: 0;
+  content: '';
+  border-style: solid;
+}
+.tooltip.tl:before {
+  margin: 0 0 1.1em 1.7em;
+}
+.tooltip.tl:after {
+  margin: 0 0 .6em -.5em;
+}
+.tooltip.tl:hover:before,
+.tooltip.tl.hover:before {
+  top: auto;
+  right: auto;
+  bottom: 100%;
+  left: 50%;
+  margin: 0 0 .5em 1.7em;
+  -webkit-transform: translate(-100%, 0);
+      -ms-transform: translate(-100%, 0);
+          transform: translate(-100%, 0);
+}
+.tooltip.tl:hover:after,
+.tooltip.tl.hover:after {
+  top: auto;
+  right: auto;
+  bottom: 100%;
+  left: 50%;
+  margin: 0 0 0 -.5em;
+  border-color: rgba(0, 0, 0, .8) transparent transparent transparent;
+  border-width: .5em .5em 0 .5em;
+}
+.tooltip:before,
+.tooltip.t:before {
+  margin: 0 0 1.1em;
+}
+.tooltip:after,
+.tooltip.t:after {
+  margin: 0 0 .6em -.5em;
+}
+.tooltip:hover:before,
+.tooltip.t:hover:before,
+.tooltip.hover:before,
+.tooltip.t.hover:before {
+  top: auto;
+  right: auto;
+  bottom: 100%;
+  left: 50%;
+  margin: 0 0 .5em;
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+.tooltip:hover:after,
+.tooltip.t:hover:after,
+.tooltip.hover:after,
+.tooltip.t.hover:after {
+  top: auto;
+  right: auto;
+  bottom: 100%;
+  left: 50%;
+  margin: 0 0 0 -.5em;
+  border-color: rgba(0, 0, 0, .8) transparent transparent transparent;
+  border-width: .5em .5em 0 .5em;
+}
+.tooltip.tr:before {
+  margin: 0 1.7em 1.1em 0;
+}
+.tooltip.tr:after {
+  margin: 0 -.5em .6em 0;
+}
+.tooltip.tr:hover:before,
+.tooltip.tr.hover:before {
+  top: auto;
+  right: 50%;
+  bottom: 100%;
+  left: auto;
+  margin: 0 1.7em .5em 0;
+  -webkit-transform: translate(100%, 0);
+      -ms-transform: translate(100%, 0);
+          transform: translate(100%, 0);
+}
+.tooltip.tr:hover:after,
+.tooltip.tr.hover:after {
+  top: auto;
+  right: 50%;
+  bottom: 100%;
+  left: auto;
+  margin: 0 -.5em 0 0;
+  border-color: rgba(0, 0, 0, .8) transparent transparent transparent;
+  border-width: .5em .5em 0 .5em;
+}
+.tooltip.l:before {
+  margin: 0 1.1em 0 0;
+}
+.tooltip.l:after {
+  margin: -.5em .6em 0 0;
+}
+.tooltip.l:hover:before,
+.tooltip.l.hover:before {
+  top: 50%;
+  right: 100%;
+  bottom: auto;
+  left: auto;
+  margin: 0 .5em 0 0;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+.tooltip.l:hover:after,
+.tooltip.l.hover:after {
+  top: 50%;
+  right: 100%;
+  bottom: auto;
+  left: auto;
+  margin: -.5em 0 0 0;
+  border-color: transparent transparent transparent rgba(0, 0, 0, .8);
+  border-width: .5em 0 .5em .5em;
+}
+.tooltip.r:before {
+  margin: 0 0 0 1.1em;
+}
+.tooltip.r:after {
+  margin: -.5em 0 0 .6em;
+}
+.tooltip.r:hover:before,
+.tooltip.r.hover:before {
+  top: 50%;
+  right: auto;
+  bottom: auto;
+  left: 100%;
+  margin: 0 0 0 .5em;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+.tooltip.r:hover:after,
+.tooltip.r.hover:after {
+  top: 50%;
+  right: auto;
+  bottom: auto;
+  left: 100%;
+  margin: -.5em 0 0 0;
+  border-color: transparent rgba(0, 0, 0, .8) transparent transparent;
+  border-width: .5em .5em .5em 0;
+}
+.tooltip.bl:before {
+  margin: 1.1em 0 0 1.7em;
+}
+.tooltip.bl:after {
+  margin: .6em 0 0 -.5em;
+}
+.tooltip.bl:hover:before,
+.tooltip.bl.hover:before {
+  top: 100%;
+  right: auto;
+  bottom: auto;
+  left: 50%;
+  margin: .5em 0 0 1.7em;
+  -webkit-transform: translate(-100%, 0);
+      -ms-transform: translate(-100%, 0);
+          transform: translate(-100%, 0);
+}
+.tooltip.bl:hover:after,
+.tooltip.bl.hover:after {
+  top: 100%;
+  right: auto;
+  bottom: auto;
+  left: 50%;
+  margin: 0 0 0 -.5em;
+  border-color: transparent transparent rgba(0, 0, 0, .8) transparent;
+  border-width: 0 .5em .5em .5em;
+}
+.tooltip.b:before {
+  margin: 1.1em 0 0;
+}
+.tooltip.b:after {
+  margin: .6em 0 0 -.5em;
+}
+.tooltip.b:hover:before,
+.tooltip.b.hover:before {
+  top: 100%;
+  right: auto;
+  bottom: auto;
+  left: 50%;
+  margin: .5em 0 0;
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+.tooltip.b:hover:after,
+.tooltip.b.hover:after {
+  top: 100%;
+  right: auto;
+  bottom: auto;
+  left: 50%;
+  margin: 0 0 0 -.5em;
+  border-color: transparent transparent rgba(0, 0, 0, .8) transparent;
+  border-width: 0 .5em .5em .5em;
+}
+.tooltip.br:before {
+  margin: 1.1em 1.7em 0 0;
+}
+.tooltip.br:after {
+  margin: .6em -.5em 0 0;
+}
+.tooltip.br:hover:before,
+.tooltip.br.hover:before {
+  top: 100%;
+  right: 50%;
+  bottom: auto;
+  left: auto;
+  margin: .5em 1.7em 0 0;
+  -webkit-transform: translate(100%, 0);
+      -ms-transform: translate(100%, 0);
+          transform: translate(100%, 0);
+}
+.tooltip.br:hover:after,
+.tooltip.br.hover:after {
+  top: 100%;
+  right: 50%;
+  bottom: auto;
+  left: auto;
+  margin: 0 -.5em 0 0;
+  border-color: transparent transparent rgba(0, 0, 0, .8) transparent;
+  border-width: 0 .5em .5em .5em;
+}

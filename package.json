@@ -1,0 +1,44 @@
+{
+  "name": "tooltips.less",
+  "version": "0.2.2",
+  "description": "LESS Tooltips",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/iamso/tooltips.less.git"
+  },
+  "bugs": {
+    "url": "https://github.com/iamso/tooltips.less/issues"
+  },
+  "author": {
+    "name": "Steve Ottoz",
+    "email": "so@dev.so"
+  },
+  "main": "dist/tooltips.min.css",
+  "keywords": [
+    "tooltips",
+    "less"
+  ],
+  "scripts": {
+    "start": "grunt"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=5.x.x"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-autoprefixer": "^3.0.3",
+    "grunt-banner": "^0.6.0",
+    "grunt-bless": "^0.2.0",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-csslint": "^0.5.0",
+    "grunt-contrib-cssmin": "^0.14.0",
+    "grunt-contrib-less": "^1.2.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-csscomb": "^3.1.0",
+    "grunt-notify": "^0.4.5",
+    "grunt-update-json": "^0.2.2",
+    "load-grunt-config": "^0.19.0",
+    "time-grunt": "^1.2.2"
+  }
+}
